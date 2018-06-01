@@ -1,23 +1,10 @@
-Assignment 4 - Redirection
+Rshell
 ===
 
-Installation process
+Overview 
 ---
 
-1. Get the code onto your local repo
-	* `git clone https://github.com/cs100/cs100-assignment-2-nc-tc.git`
-2. Get to the directory
-	* `cd cs100-assignment-2-nc-tc`
-	* `git checkout assn4`
-3. make and run the file
-	* `make`
-	* `bin/rshell`
-
-
-Overview of the assignment
----
-
-Previously, we created a command shell known as Rshell as well the an expansion from assignment 3 that added the test command and the precedence operator. For assignment 4, the final update, we added redirection. Using the now added redirection, there is ease of use for redirecting standard input and output to where it is desired.
+Previously, we created a command shell known as Rshell that have the test command and the precedence operator. There is ease of use for redirecting standard input and output to where it is desired.
 
 1. Ouput Redirect
 	* is denoted by `>`
