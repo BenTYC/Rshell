@@ -4,6 +4,49 @@ Rshell
 Overview 
 ---
 
+Write a command shell called rshell in C++
+
+Assignment 1: Design a simple UML diagram to represent components and their dependencies
+Assignment 2: Implement basic command shell 
+Assignment 3: Implement precedence operators and test command for Rshell
+Assignment 4: Implement Redirect and Piping for Rshell
+
+Assignment 1 
+---
+
+This assignment is to implement a command shell in C++. We use Composite Pattern and expression tree for our structure. For the expression tree, the nodes could be operations: “: || &&” and commands. So the node is our base structure. First, build the tree according to the rule of expression tree and return the root node. Then execute it from the leftmost child of the tree to the root. If a exit command execute, it breaks out the process.  
+  
+Our program includes /bin/ and /usr/bin/ to execute the commands. Besides, we implement function exit() to leave the process. Which are all implemented in the class CMD. The function execvp() can execute the command and return a boolean value for checking if it succeeds, which would be used for the operator: && and ||. As for the function execute(), for CMD is to execute the command, for operator is to combine the result of left child and right child.  
+
+
+Assignment 2 
+---
+
+
+
+Assignment 3 
+---
+
+In assignment 3 we took took our previously created command shell known as Rshell and added more functionality. The assignment 2 rshell lacked two very needed commands. These were test and the precedence operators.
+
+1. The Test Command
+	* gives identity to any certain file or directory
+	* prints (True) or (False) to screen
+	* starts with either `test` or is surronded by `[` and `]`
+	* uses the flags: `-e`, `-f`, `-d` or no flag at all
+	* ex : `test -e directory` - determines whether directory exists
+	* ex : `[ -f file ]` - determines whether "file" is actually a file
+
+2. The Precedence Operators
+	* can be used to give code within the operators precedence
+	* works similarly to parentheses in math
+	* defined by `(` and `)`
+	* can be used in layers with parentheses in parentheses
+	* ex : `(echo A && echo B) || (echo C && echo D)` - outputs A B
+
+Assignment 4 
+---
+
 Previously, we created a command shell known as Rshell that have the test command and the precedence operator. There is ease of use for redirecting standard input and output to where it is desired.
 
 1. Ouput Redirect
@@ -43,19 +86,3 @@ Bugs - Past and Current
 
 * Redirection does not work for standard error (ie: 2>, &>)
 * Not all functionalities are directly the same as the bash script
-
-
-Task Distribution
----
-
-BenTYC complete:
-Task 2: Input redirection (For commands contain "<", 20%);
-Task 3: output redirection (For commands contain ">" and ">>", 20%);
-Task 4: Piping (25%)
-total: 65%
-
-noahchristensen complete:
-Task 1: Github Setup (10%)
-Task 5: construct test scripts (enough test cases, 15%)
-Task 6: construct json and README files, and git commit (that means, all the works meaned from the part "Submission" to "Coding Conventions" in assignment 3 description)(10%) 
-total: 35%
