@@ -23,25 +23,25 @@ Assignment 2
 ---
 <img src="https://github.com/BenTYC/Rshell/blob/master/Command%20Tree.png" width="400">
 
-*Base
+1. Base  
 Our classes all inherit from the Base class. In our design, the Base class is similar to the node of expression tree. It has a virtual function execute(), which executes the command or the function of connector.
 
-*Command Tree
+2. Command Tree  
 The Command Tree class is a binary tree, and it’s the only class that user can use. The structure of our command tree is similar to expression tree: the connector is the operator and the command is the operand. The command tree holds a private member root, a tree building function and a execution function which executes the commands user input.
 
-*CMD
+3. CMD  
 The CMD class contains and executes the command. In the command tree, the CMD classes are always the leaf nodes. It holds a string member variable cmd, which is the command to be executed, and a member execute() that executes the command by system call execvp() and returns a boolean value to show if it succeeds.
 
-*Connector
+4. Connector  
 The connector class is equal to the operator of expression tree, so it is always the internal node. A connector node has two Base pointers of children node and a virtual function execute(), which determines how the connector works.
 
-*And
+5. And  
 The And class node implements the member function execute(), which always executes the left child first, then executes the right child only if the left child has successfully executed. It returns true if both both children succeed.
 
-*Or
+6. Or  
 The Or class node implements the member function execute(), which always executes the left child first, then executes the right child only if the left child has failed the execution. It returns true if left child fail and right child succeed.
 
-*Semicolon
+7. Semicolon  
 The Semicolon class node implements the member function execute(), which always executes the left child first, then executes the right child. And it always returns true.
 
 Assignment 3 
