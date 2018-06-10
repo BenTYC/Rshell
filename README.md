@@ -6,10 +6,10 @@ Overview
 
 Write a command shell called rshell in C++  
   
-Assignment 1: Design a simple UML diagram to represent components and their dependencies  
-Assignment 2: Implement basic command shell  
-Assignment 3: Implement precedence operators and test command for Rshell  
-Assignment 4: Implement Redirect and Piping for Rshell
+* Assignment 1: Design a simple UML diagram to represent components and their dependencies  
+* Assignment 2: Implement basic command shell  
+* Assignment 3: Implement precedence operators and test command for Rshell  
+* Assignment 4: Implement Redirect and Piping for Rshell
 
 Assignment 1 
 ---
