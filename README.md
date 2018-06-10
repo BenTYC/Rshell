@@ -13,7 +13,7 @@ Assignment 4: Implement Redirect and Piping for Rshell
 
 Assignment 1 
 ---
-<img src="https://github.com/BenTYC/Rshell/blob/master/UML.png" width="400">
+<img src="https://github.com/BenTYC/Rshell/blob/master/UML.png" width="600">
 
 This assignment is to implement a command shell in C++. We use Composite Pattern and expression tree for our structure. For the expression tree, the nodes could be operations: “: || &&” and commands. So the node is our base structure. First, build the tree according to the rule of expression tree and return the root node. Then execute it from the leftmost child of the tree to the root. If a exit command execute, it breaks out the process.  
   
@@ -21,7 +21,7 @@ Our program includes /bin/ and /usr/bin/ to execute the commands. Besides, we im
 
 Assignment 2 
 ---
-<img src="https://github.com/BenTYC/Rshell/blob/master/Command%20Tree.png" width="400">
+<img src="https://github.com/BenTYC/Rshell/blob/master/Command%20Tree.png" width="300">
 
 1. Base  
 Our classes all inherit from the Base class. In our design, the Base class is similar to the node of expression tree. It has a virtual function execute(), which executes the command or the function of connector.
