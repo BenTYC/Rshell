@@ -96,7 +96,7 @@ Previously, we created a command shell known as Rshell that have the test comman
 	* ex: cat program.cpp | someVar` - prints to screen every line containing "someVar"
 
 
-Bugs - Past and Current
+Bugs - Past
 ---
 
 * Test command with no flag gave a segmentation fault
